@@ -7,7 +7,9 @@ public class startManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Screen.SetResolution (800, 480, true);
+		//Screen.SetResolution (800, 480, true);
+
+		Screen.SetResolution (480, 800,  true);
 	
 	}
 	
@@ -25,17 +27,17 @@ public class startManager : MonoBehaviour {
 		GUI.Label (new Rect(100,100,500,500),"<Color='white'>"+str+"</Color>");
 
 
-		if (GUI.Button (new Rect (500, 100, 200, 70), "<size=40>Start</size>")){
+		if (GUI.Button (new Rect (100, 100, 200, 70), "<size=40>Start</size>")){
 
 			Application.LoadLevel("scStage1");
 		}
 
-		if (GUI.Button (new Rect (500, 200, 200, 70), "<size=40>Coin Shop</size>")){			
+		if (GUI.Button (new Rect (100, 200, 200, 70), "<size=40>Coin Shop</size>")){			
 			//playerCtrl.basicAngle = Input.acceleration.y;
 			Application.LoadLevel("scCoin");
 		}
 
-		if (GUI.Button (new Rect (500, 300, 200, 70), "<size=40>Log Out</size>")){
+		if (GUI.Button (new Rect (100, 300, 200, 70), "<size=40>Log Out</size>")){
 
 			PlayerPrefs.SetInt("IsLogIn",0);
 			PlayerPrefs.SetString("email","");
@@ -46,7 +48,7 @@ public class startManager : MonoBehaviour {
 			Application.LoadLevel("scPreStart");
 		}
 
-		if (GUI.Button (new Rect (500, 400, 200, 70), "<size=40>Exit</size>")){
+		if (GUI.Button (new Rect (100, 400, 200, 70), "<size=40>Exit</size>")){
 			
 			playerCtrl.basicAngle = Input.acceleration.y;
 			Application.Quit();

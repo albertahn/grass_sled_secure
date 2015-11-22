@@ -36,18 +36,18 @@ public class gameUI : MonoBehaviour {
 	}
 
 	void OnGUI(){
-		speedHeight = 180 * speed/maxSpeed;
+	//	speedHeight = 180 * speed/maxSpeed;
 
 		GUI.DrawTexture (new Rect(w-wObj,h-hObj,wObj,hObj),speed_back);
-		GUI.DrawTexture (new Rect(w-130,h-40,90,-speedHeight),speed_front);
+		//GUI.DrawTexture (new Rect(w-130,h-40,90,-speedHeight),speed_front);
 		GUI.DrawTexture (new Rect(0,h-80,200,100),timeTexture);
 		GUI.DrawTexture (new Rect(200,h-80,200,100),coinTexture);
-		GUI.Label (new Rect(w-230,h-75,150,100),"<size=40>"+speed+"</size><size=20>m/h</size>");
+		//GUI.Label (new Rect(w-230,h-75,150,100),"<size=40>"+speed+"</size><size=20>m/h</size>");
 		GUI.Label (new Rect(80,h-50,100,100),"<size=35>"+(int)_gameMgr.gameTime+"</size><size=20>s</size>");
-		GUI.Label (new Rect(280,h-50,100,100),"<size=35>"+calculateUnit()+"</size>");
+		//GUI.Label (new Rect(280,h-50,100,100),"<size=35>"+calculateUnit()+"</size>");
 	}
 
-	string calculateUnit(){
+	/*string calculateUnit(){
 		int x = _gameMgr.coin;
 		int k, m, b, t;
 		if (x >= 1000000000) {
@@ -62,5 +62,5 @@ public class gameUI : MonoBehaviour {
 		} else {
 			return x.ToString();
 		}
-	}
+	}*/
 }

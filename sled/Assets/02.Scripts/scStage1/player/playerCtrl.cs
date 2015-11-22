@@ -25,6 +25,11 @@ public class playerCtrl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		//screen
+		//Screen.SetResolution(600, 1024 , true);
+
+
 		h = 0.0f;
 		v = 0.0f;
 		vspeed = 20.0f;
